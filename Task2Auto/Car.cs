@@ -12,42 +12,81 @@ namespace Task2Auto
         private int _currentFuelLevel;
         private int _fuelCapacity;
 
+        public Car(int id, string brand, string model, int year, int fuelCapcity) : base(id, brand, model, year)
+        {
+            _fuelCapacity = fuelCapcity;
+        }
+
         /// <summary>
         /// Вместимость бака. 
         /// </summary>
         public int FuelCapacity
         {
-            get => _fuelCapacity; //Реализован толькко геттер для инкапсуляции
+            get => _fuelCapacity; //Реализован только геттер для инкапсуляции
         }
         public int CurrentFuelLevel
         {
-            get => _currentFuelLevel; //Реализован толькко геттер для инкапсуляции 
+            get => _currentFuelLevel; //Реализован только геттер для инкапсуляции 
         }
         public override void Accelerate(int speed)
         {
-            throw new NotImplementedException();
+            if (speed > 0)
+            {
+                Speed += speed;
+                Console.WriteLine($"Скорость увеличена на {speed}. Теперь скорость равна: {Speed}");
+            }
+            else
+            {
+                Console.WriteLine($"Скорость можно увеличить только на положительное число");
+            }
         }
 
         public override void Brake()
         {
-            throw new NotImplementedException();
+            if (Speed > 0)
+            {
+                Speed = 0;
+                Console.WriteLine("Машина остановлена");
+            }
         }
 
         public override void DisplayInfo()
         {
-            throw new NotImplementedException();
+            string engine = IsEngineStarted ? "Запущен" : "Не запущен";
+            Console.WriteLine($"Автомобиль: {this.Id}, {this.Brand}, {this.Brand}, {this.Model}, Год: {this.Year}. Двигатель: {engine}. Количество топлива: {CurrentFuelLevel}. Скорость: {Speed}");
         }
 
         public override void StartEngine()
         {
-            throw new NotImplementedException();
+            if (IsEngineStarted)
+            {
+                Console.WriteLine("Двигатель уже запущен");
+            }
+            else
+            {
+                Console.WriteLine("Двигатель запущен");
+                IsEngineStarted = true;
+            }
         }
 
         public override void StopEngine()
         {
-            throw new NotImplementedException();
+            if (IsEngineStarted)
+            {
+                Console.WriteLine("Двигатель остановлен");
+                IsEngineStarted= false;
+            }
+            else
+            {
+                Console.WriteLine("Двигатель не запущен");
+               
+            }
         }
         
+        /// <summary>
+        /// Заправить бак
+        /// </summary>
+        /// <param name="liters">Количество литров</param>
         public void Refuel(int liters)
         {
             if (liters < 0)
