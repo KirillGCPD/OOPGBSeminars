@@ -16,7 +16,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var logger = new FileLogger();
+            View view = new View(logger);
+            view.RunView();
         }
     }
 }
