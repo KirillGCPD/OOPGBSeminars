@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2Auto", "Task2Auto\Task
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3LINQ", "Task3LINQ\Task3LINQ.csproj", "{2D50A1F1-759F-4A14-8B01-1D397D803566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4Generics", "Task4Generics\Task4Generics.csproj", "{49E348A1-69C8-493A-B6A5-D8F678BAC316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task4Generics", "Task4Generics\Task4Generics.csproj", "{49E348A1-69C8-493A-B6A5-D8F678BAC316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task10Calculator", "Task10Calculator\Task10Calculator.csproj", "{65C5EA32-447A-4D0C-B6A1-9E84C8468E0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{49E348A1-69C8-493A-B6A5-D8F678BAC316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E348A1-69C8-493A-B6A5-D8F678BAC316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E348A1-69C8-493A-B6A5-D8F678BAC316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C5EA32-447A-4D0C-B6A1-9E84C8468E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C5EA32-447A-4D0C-B6A1-9E84C8468E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C5EA32-447A-4D0C-B6A1-9E84C8468E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C5EA32-447A-4D0C-B6A1-9E84C8468E0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
